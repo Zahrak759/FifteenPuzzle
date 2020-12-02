@@ -1,15 +1,12 @@
 "use strict";
 
 var current_Tile;
-var notify;
-
 var Y;
 var X;
 var temp;
   
  window.onload = function ()
  {
-   
 	var puzzleArea = document.getElementById('Tiles_area');
 	current_Tile = puzzleArea.getElementsByTagName('div');
 	for (var i=0; i<current_Tile.length; i++){
@@ -17,10 +14,10 @@ var temp;
 	current_Tile[i].style.left = (i%4*100)+'px';
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
- current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-    current_Tile[i].onmouseover = function() 
+    current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
+  current_Tile[i].onmouseover = function() 
   {
- 
+  this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
 			if (checkMove(parseInt(this.innerHTML)))
       {
 				this.style.border = "3px solid red";
@@ -89,7 +86,7 @@ var temp;
 					swap(temp);
 				}
 			}
-		}
+		} 
 	}
 }
 function checkMove(position) // returns true whenever a piece can be moved into an empty space
@@ -111,32 +108,16 @@ function checkMove(position) // returns true whenever a piece can be moved into 
 		return true;
 	}
 }
-function Notify() //notifies the user
+function Message() //notifies the user
 {
-	notify --; //decrements the value of
-	if (notify == 0) //if the value reaches the end then
-	{
-		var body = document.getElementsByTagName('body'); //retrieves body element in html
-		body[0].style.backgroundImage= "none"; //reverts to original page background
 		alert('You Won! Click Ok to Play Again'); //tells the user that they have won the game
-	  para[0].style.visibility="visible"; //reverts visiblity to its original state
-		return;
-	}
-	else  (notify % 2)
-	{
-		var body = document.getElementsByTagName('body');
-	  body[0].style.backgroundImage= "url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-	    //sets background pic to show user that they had completed the puzzle
-	}
-     //notifies the user for 2 secs
 }
 function win() //notifies user that they have won
 {
 	var body = document.getElementsByTagName('body');
 	body[0].style.backgroundImage= "url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-	notify = 10; //initializes notify variable
-	
-	para[0].style.visibility="hidden"; //hides text when user is being notified
+  if(alert('Alert For your User!')){}
+  else    window.location.reload(); 
 }
 function finish() //checks when the game reaches its end
 {
@@ -212,7 +193,7 @@ function down (x, y) //calculates how far down a puzzlepiece should position
 	}
 }
 function up(x, y) //calculates how far up a puzzlepiece should position
-{
+{ 
 	var cordX = parseInt(x);
 	var cordY = parseInt(y);
 	if (cordY > 0)
