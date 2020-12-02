@@ -1,6 +1,4 @@
 
-//Extra Feature: End-of_Game Notification
-//displays bg when the game is won, animation
 
 "use strict";
 
