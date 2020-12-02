@@ -53,7 +53,8 @@ var move_counter = 0;
 	X = '300px';
 	Y = '300px';
 	shuffle.onclick = function()
-	{
+	{ move_counter = 0;
+	 document.getElementById("demo").innerHTML = move_counter;
     setTimeout(function(){ alert("You lose"); }, 30000);
 		for (var i=0; i<300; i++)
 		{
@@ -224,5 +225,3 @@ function swap (position) //moves the puzzle piece by switching position with an 
 	 current_Tile[position].style.left = X;
 	X = temp;
 }
-
-
