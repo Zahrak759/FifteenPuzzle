@@ -43,7 +43,7 @@ h1 {
 
 /* This class should be applied to each of the 15 puzzle pieces. */
 .puzzlepiece1 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -56,7 +56,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece2 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -69,7 +69,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece3 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -82,7 +82,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece4 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -95,7 +95,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece5 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -108,7 +108,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece6 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -121,7 +121,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece7 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -134,7 +134,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece8 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -147,7 +147,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece9 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -160,7 +160,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece10 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -173,7 +173,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece11 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -186,7 +186,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece12 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -199,7 +199,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece13 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -212,7 +212,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece14 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
@@ -225,7 +225,7 @@ h1 {
 	width: 96px;
 }
 .puzzlepiece15 {
-	background-image: url(background.jpg);
+	background-image: url(panther.png);
 	background-size: 400px 400px;
 	border: 2px solid black;
 	height: 96px;
