@@ -4,9 +4,11 @@ var current_Tile;
 var Y;
 var X;
 var temp;
-  
+var move_counter = 0;
+
  window.onload = function ()
- {
+ { 
+   
 	var puzzleArea = document.getElementById('Tiles_area');
 	current_Tile = puzzleArea.getElementsByTagName('div');
 	for (var i=0; i<current_Tile.length; i++){
@@ -23,7 +25,7 @@ var temp;
 				this.style.border = "3px solid red";
 				this.style.color = "#006600";
 				this.style.textDecoration = "underline";
-			}
+      }
 		}
 		current_Tile[i].onmouseout = function()
     {
@@ -33,6 +35,8 @@ var temp;
 		}
 		current_Tile[i].onclick = function()
     {
+      move_counter++;
+      document.getElementById("demo").innerHTML = move_counter;
 			if (checkMove(parseInt(this.innerHTML)))
       {
 				swap(this.innerHTML-1); //moves into an empty space if true
@@ -40,6 +44,7 @@ var temp;
 				{
 					win(); //alerts the player that they have won the game
 				}
+        
 				return;
 			}
 		}
@@ -48,9 +53,8 @@ var temp;
 	X = '300px';
 	Y = '300px';
 	shuffle.onclick = function()
-  //shuffle.onclick = var fiveMinutes = 60 * 5  display = document.querySelector('#time');startTimer(fiveMinutes, display);;
-  //activates whenever the shuffle button is clicked
 	{
+    setTimeout(function(){ alert("You lose"); }, 30000);
 		for (var i=0; i<300; i++)
 		{
 			var rand = parseInt(Math.random()* 100) %4; //generates a random number for shuffling each piece
@@ -220,4 +224,5 @@ function swap (position) //moves the puzzle piece by switching position with an 
 	 current_Tile[position].style.left = X;
 	X = temp;
 }
+
 
