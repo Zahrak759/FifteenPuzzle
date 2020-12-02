@@ -1,6 +1,7 @@
 
 //Extra Feature: End-of_Game Notification
 //displays bg when the game is won, animation
+
 "use strict";
 
 var gamePiece;
@@ -202,7 +203,7 @@ function Notify() //notifies the user
 
 		body[0].style.backgroundImage= "none"; //reverts to original page background
 
-		alert('Winner! ... Shuffle and Play Again'); //tells the user that they have won the game
+		alert('You Won! Click Ok to Play Again'); //tells the user that they have won the game
 
 		var para=document.getElementsByClassName('explanation');
 	    para[0].style.visibility="visible"; //reverts visiblity to its original state
