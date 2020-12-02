@@ -60,3 +60,9 @@ h1 {
 #w3c img {
 	border: none;
 }
+
+demo{
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
