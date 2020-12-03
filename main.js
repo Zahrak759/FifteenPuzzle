@@ -8,18 +8,18 @@ var temp;
 var move_counter = 0;
 
  window.onload = function ()
- { 
-   
+ {
+
 	var puzzleArea = document.getElementById('Tiles_area');
 	current_Tile = puzzleArea.getElementsByTagName('div');
-   
+
 	for (var i=0; i<current_Tile.length; i++){
 	current_Tile[i].className = 'puzzlepiece';
 	current_Tile[i].style.left = (i%4*100)+'px';
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
   current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-  current_Tile[i].onmouseover = function() 
+  current_Tile[i].onmouseover = function()
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
 			if (checkMove(parseInt(this.innerHTML)))
@@ -46,7 +46,7 @@ var move_counter = 0;
 				{
 					win(); //alerts the player that they have won the game
 				}
-        
+
 				return;
 			}
 		}
@@ -55,8 +55,8 @@ var move_counter = 0;
 	X = '300px';
 	Y = '300px';
 	shuffle.onclick = function()
-	{ 
-    
+	{
+
      myMusic = new Audio("https://codd.cs.gsu.edu/~kwilson103/project15/Jeopardy-theme-song.mp3");
      myMusic.play();
      myMusic.loop= true;
@@ -116,7 +116,7 @@ function pad(val) {
 					swap(temp);
 				}
 			}
-		} 
+		}
 	}
 }
 function checkMove(position) // returns true whenever a piece can be moved into an empty space
@@ -146,8 +146,8 @@ function win() //notifies user that they have won
 {
 	var body = document.getElementsByTagName('body');
 	body[0].style.backgroundImage= "url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-  if(alert('Alert For your User!')){}
-  else    window.location.reload(); 
+  if(alert('You Won!')){}
+  else    window.location.reload();
 }
 function finish() //checks when the game reaches its end
 {
@@ -223,7 +223,7 @@ function down (x, y) //calculates how far down a puzzlepiece should position
 	}
 }
 function up(x, y) //calculates how far up a puzzlepiece should position
-{ 
+{
 	var cordX = parseInt(x);
 	var cordY = parseInt(y);
 	if (cordY > 0)
@@ -262,7 +262,7 @@ Image1.onclick = function()
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
   current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
-  current_Tile[i].onmouseover = function() 
+  current_Tile[i].onmouseover = function()
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
 			if (checkMove(parseInt(this.innerHTML)))
@@ -306,7 +306,7 @@ Image2.onclick = function()
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
   current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~kwilson103/project15/Poke_Ball1.png')";
-  current_Tile[i].onmouseover = function() 
+  current_Tile[i].onmouseover = function()
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~kwilson103/project15/Poke_Ball1.png')";
 			if (checkMove(parseInt(this.innerHTML)))
@@ -350,7 +350,7 @@ Image3.onclick = function()
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
   current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/covid.png')";
-  current_Tile[i].onmouseover = function() 
+  current_Tile[i].onmouseover = function()
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/covid.png')";
 			if (checkMove(parseInt(this.innerHTML)))
@@ -394,7 +394,7 @@ Image4.onclick = function()
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
   current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/2020.png')";
-  current_Tile[i].onmouseover = function() 
+  current_Tile[i].onmouseover = function()
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/2020.png')";
 			if (checkMove(parseInt(this.innerHTML)))
@@ -426,4 +426,3 @@ Image4.onclick = function()
 		}
 	}
 }
-
