@@ -54,7 +54,27 @@ var move_counter = 0;
 	X = '300px';
 	Y = '300px';
 	shuffle.onclick = function()
-	{ move_counter = 0;
+	{ 
+    var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+setInterval(setTime, 1000);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+    move_counter = 0;
     document.getElementById("demo").innerHTML = move_counter;
     setTimeout(function(){ alert("You lose"); }, 30000);
 		for (var i=0; i<300; i++)
@@ -402,3 +422,4 @@ Image4.onclick = function()
 		}
 	}
 }
+
