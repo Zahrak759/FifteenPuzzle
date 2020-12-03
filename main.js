@@ -11,12 +11,13 @@ var move_counter = 0;
    
 	var puzzleArea = document.getElementById('Tiles_area');
 	current_Tile = puzzleArea.getElementsByTagName('div');
+   
 	for (var i=0; i<current_Tile.length; i++){
 	current_Tile[i].className = 'puzzlepiece';
 	current_Tile[i].style.left = (i%4*100)+'px';
 	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
 	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
-    current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
+  current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
   current_Tile[i].onmouseover = function() 
   {
   this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
@@ -54,7 +55,7 @@ var move_counter = 0;
 	Y = '300px';
 	shuffle.onclick = function()
 	{ move_counter = 0;
-	 document.getElementById("demo").innerHTML = move_counter;
+    document.getElementById("demo").innerHTML = move_counter;
     setTimeout(function(){ alert("You lose"); }, 30000);
 		for (var i=0; i<300; i++)
 		{
@@ -224,4 +225,180 @@ function swap (position) //moves the puzzle piece by switching position with an 
 	temp =  current_Tile[position].style.left;
 	 current_Tile[position].style.left = X;
 	X = temp;
+}
+var Image1 = document.getElementById('Image1');
+Image1.onclick = function()
+{
+  var puzzleArea = document.getElementById('Tiles_area');
+	current_Tile = puzzleArea.getElementsByTagName('div');
+  for (var i=0; i<current_Tile.length; i++)
+  {
+	current_Tile[i].className = 'puzzlepiece';
+	current_Tile[i].style.left = (i%4*100)+'px';
+	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
+	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
+  current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
+  current_Tile[i].onmouseover = function() 
+  {
+  this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/panther.png')";
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				this.style.border = "3px solid red";
+				this.style.color = "#006600";
+				this.style.textDecoration = "underline";
+      }
+		}
+		current_Tile[i].onmouseout = function()
+    {
+			this.style.border = "2px solid black";
+			this.style.color = "#000000";
+			this.style.textDecoration = "none";
+		}
+		current_Tile[i].onclick = function()
+    {
+      move_counter++;
+      document.getElementById("demo").innerHTML = move_counter;
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				swap(this.innerHTML-1); //moves into an empty space if true
+				if (finish()) //checks when the all the 15 pieces are in its right space
+				{
+					win(); //alerts the player that they have won the game
+				}
+				return;
+			}
+		}
+	}
+}
+var Image2 = document.getElementById('Image2');
+Image2.onclick = function()
+{
+  var puzzleArea = document.getElementById('Tiles_area');
+	current_Tile = puzzleArea.getElementsByTagName('div');
+  for (var i=0; i<current_Tile.length; i++)
+  {
+	current_Tile[i].className = 'puzzlepiece';
+	current_Tile[i].style.left = (i%4*100)+'px';
+	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
+	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
+  current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~kwilson103/project15/Poke_Ball1.png')";
+  current_Tile[i].onmouseover = function() 
+  {
+  this.style.backgroundImage="url('https://codd.cs.gsu.edu/~kwilson103/project15/Poke_Ball1.png')";
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				this.style.border = "3px solid red";
+				this.style.color = "#006600";
+				this.style.textDecoration = "underline";
+      }
+		}
+		current_Tile[i].onmouseout = function()
+    {
+			this.style.border = "2px solid black";
+			this.style.color = "#000000";
+			this.style.textDecoration = "none";
+		}
+		current_Tile[i].onclick = function()
+    {
+      move_counter++;
+      document.getElementById("demo").innerHTML = move_counter;
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				swap(this.innerHTML-1); //moves into an empty space if true
+				if (finish()) //checks when the all the 15 pieces are in its right space
+				{
+					win(); //alerts the player that they have won the game
+				}
+				return;
+			}
+		}
+	}
+}
+var Image3 = document.getElementById('Image3');
+Image3.onclick = function()
+{
+  var puzzleArea = document.getElementById('Tiles_area');
+	current_Tile = puzzleArea.getElementsByTagName('div');
+  for (var i=0; i<current_Tile.length; i++)
+  {
+	current_Tile[i].className = 'puzzlepiece';
+	current_Tile[i].style.left = (i%4*100)+'px';
+	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
+	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
+  current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/covid.png')";
+  current_Tile[i].onmouseover = function() 
+  {
+  this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/covid.png')";
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				this.style.border = "3px solid red";
+				this.style.color = "#006600";
+				this.style.textDecoration = "underline";
+      }
+		}
+		current_Tile[i].onmouseout = function()
+    {
+			this.style.border = "2px solid black";
+			this.style.color = "#000000";
+			this.style.textDecoration = "none";
+		}
+		current_Tile[i].onclick = function()
+    {
+      move_counter++;
+      document.getElementById("demo").innerHTML = move_counter;
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				swap(this.innerHTML-1); //moves into an empty space if true
+				if (finish()) //checks when the all the 15 pieces are in its right space
+				{
+					win(); //alerts the player that they have won the game
+				}
+				return;
+			}
+		}
+	}
+}
+var Image4 = document.getElementById('Image4');
+Image4.onclick = function()
+{
+  var puzzleArea = document.getElementById('Tiles_area');
+	current_Tile = puzzleArea.getElementsByTagName('div');
+  for (var i=0; i<current_Tile.length; i++)
+  {
+	current_Tile[i].className = 'puzzlepiece';
+	current_Tile[i].style.left = (i%4*100)+'px';
+	current_Tile[i].style.top = (parseInt(i/4)*100) + 'px';
+	current_Tile[i].style.backgroundPosition= '-' +  current_Tile[i].style.left + ' ' + '-' + current_Tile[i].style.top;
+  current_Tile[i].style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/2020.png')";
+  current_Tile[i].onmouseover = function() 
+  {
+  this.style.backgroundImage="url('https://codd.cs.gsu.edu/~znajib1/WP/PW/Fifteen-Puzzle/2020.png')";
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				this.style.border = "3px solid red";
+				this.style.color = "#006600";
+				this.style.textDecoration = "underline";
+      }
+		}
+		current_Tile[i].onmouseout = function()
+    {
+			this.style.border = "2px solid black";
+			this.style.color = "#000000";
+			this.style.textDecoration = "none";
+		}
+		current_Tile[i].onclick = function()
+    {
+      move_counter++;
+      document.getElementById("demo").innerHTML = move_counter;
+			if (checkMove(parseInt(this.innerHTML)))
+      {
+				swap(this.innerHTML-1); //moves into an empty space if true
+				if (finish()) //checks when the all the 15 pieces are in its right space
+				{
+					win(); //alerts the player that they have won the game
+				}
+				return;
+			}
+		}
+	}
 }
