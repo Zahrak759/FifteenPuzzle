@@ -3,6 +3,7 @@
 var current_Tile;
 var Y;
 var X;
+var myMusic;
 var temp;
 var move_counter = 0;
 
@@ -55,6 +56,10 @@ var move_counter = 0;
 	Y = '300px';
 	shuffle.onclick = function()
 	{ 
+    
+     myMusic = new Audio("https://codd.cs.gsu.edu/~kwilson103/project15/Jeopardy-theme-song.mp3");
+     myMusic.play();
+     myMusic.loop= true;
     var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
@@ -76,7 +81,6 @@ function pad(val) {
 }
     move_counter = 0;
     document.getElementById("demo").innerHTML = move_counter;
-    setTimeout(function(){ alert("You lose"); }, 30000);
 		for (var i=0; i<300; i++)
 		{
 			var rand = parseInt(Math.random()* 100) %4; //generates a random number for shuffling each piece
