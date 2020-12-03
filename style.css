@@ -5,12 +5,12 @@ body {
 }
 
 #controls,
-#overall,
-#puzzlearea {
+#Puzzle_center,
+#Tiles_area {
 	width: 400px;
 }
 
-#controls {
+#controler {
 	padding-top: 10px;
 	text-align: center;
 }
@@ -21,13 +21,13 @@ h1 {
 }
 
 /* Used to center the puzzle. */
-#overall {
+#Puzzle_center {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 /* The area that holds the 15 puzzle pieces. */
-#puzzlearea {
+#Tiles_area {
 	font-size: 32px;
 	height: 400px;
 	padding: 0px;
@@ -59,4 +59,10 @@ h1 {
 
 #w3c img {
 	border: none;
+}
+
+demo{
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
 }
